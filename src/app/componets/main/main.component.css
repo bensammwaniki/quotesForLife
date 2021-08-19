@@ -1,0 +1,10 @@
+@import url("~bootstrap/dist/css/bootstrap.min.css");
+
+body{
+    /* background-color: rgba(0, 0, 0, 0.336); */
+}
+.bd{
+    display: flex;
+    padding: 20px;
+    background-color: rgba(100, 148, 237, 0.541);
+}
