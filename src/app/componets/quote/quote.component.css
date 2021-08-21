@@ -1,0 +1,7 @@
+@import url("~bootstrap/dist/css/bootstrap.min.css");
+
+.card{
+    color: black;
+    box-shadow: 2px 2px 5px gray;
+    margin: 30px;
+}
