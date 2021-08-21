@@ -2,7 +2,13 @@
 
 body{
     /* background-color: rgba(0, 0, 0, 0.336); */
-    background-image: url("assets/bg.jpg");
+    background-image: url("bg.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: fit-content;
+    margin: 20px;
+    padding: 40px;
+    color: cornsilk;
 }
 .bd{
     display: flex;

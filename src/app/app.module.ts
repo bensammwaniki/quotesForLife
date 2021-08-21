@@ -17,4 +17,6 @@ import { MainComponent } from './componets/main/main.component';
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule { 
+  
+}
