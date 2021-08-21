@@ -10,8 +10,18 @@ body{
     padding: 40px;
     color: cornsilk;
 }
-.bd{
+.form{
     display: flex;
     padding: 20px;
     background-color: rgba(100, 148, 237, 0.541);
+}
+.data{
+    padding: 10px;
+    width: 18rem;
+}
+.data *{
+    padding: 5px 0px 5px 0px;
+}
+.data label{
+    font-size: 1.2em;
 }
