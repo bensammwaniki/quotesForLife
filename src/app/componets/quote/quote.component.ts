@@ -22,13 +22,21 @@ export class QuoteComponent implements OnInit {
       return <any>new Date(b.datePosted) - <any>new Date(a.datePosted);
     });
   } 
- // adds quotes in an Array 
-quoteAdded = new Quote(0,"","","","",new Date(),0,0);
+
+  // add a quote on submit
+  newQuote = new Quote(0,"","","","",new Date(),0,0);
   @Output() add = new EventEmitter<Quote>();
-  addQuote(){
-this.add.emit(this.quoteAdded);
-this.quoteAdded = new Quote(0,"","","","",new Date(),0,0);
+
+  addQuote(quoteAdd: Quote){
+    let arraysize = this.quote.length;
+    quoteAdd.id = arraysize+1;
+    quoteAdd.completeDate = new Date(quoteAdd.completeDate)
+    this.quote.push(quoteAdd)
+    this.add.emit(this.newQuote);
+    this.newQuote = new Quote(0,"","","","",new Date(),0,0);
   }
+
+  
   constructor() { }
 
   ngOnInit() {
