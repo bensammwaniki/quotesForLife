@@ -4,7 +4,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MainComponent } from './componets/main/main.component';
-import { QuotesComponent } from './quotes/quotes.component';
 import { QuoteComponent } from './componets/quote/quote.component';
 import { FormComponent } from './componets/form/form.component';
 
@@ -12,7 +11,6 @@ import { FormComponent } from './componets/form/form.component';
   declarations: [
     AppComponent,
     MainComponent,
-    QuotesComponent,
     QuoteComponent,
     FormComponent
   ],
