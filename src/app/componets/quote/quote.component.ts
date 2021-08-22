@@ -28,6 +28,7 @@ export class QuoteComponent implements OnInit {
     quoteAdd.id = arraysize+1;
     quoteAdd.datePosted = new Date(quoteAdd.completeDate)
     this.quote.push(quoteAdd)
+    console.log(Quote);
   }
 
   @Input()
