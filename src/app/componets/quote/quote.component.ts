@@ -1,4 +1,5 @@
 
+import { Input } from '@angular/core';
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { Quote } from 'src/app/quote';
 
@@ -22,20 +23,40 @@ export class QuoteComponent implements OnInit {
       return <any>new Date(b.datePosted) - <any>new Date(a.datePosted);
     });
   } 
-
-  // add a quote on submit
-  newQuote = new Quote(0,"","","","",new Date(),0,0);
-  @Output() add = new EventEmitter<Quote>();
-
-  addQuote(quoteAdd: Quote){
+  newAddQuote(quoteAdd: Quote){
     let arraysize = this.quote.length;
     quoteAdd.id = arraysize+1;
-    quoteAdd.completeDate = new Date(quoteAdd.completeDate)
+    quoteAdd.datePosted = new Date(quoteAdd.completeDate)
     this.quote.push(quoteAdd)
-    this.add.emit(this.newQuote);
-    this.newQuote = new Quote(0,"","","","",new Date(),0,0);
   }
 
+  @Input()
+  qLife!: Quote;
+  @Output() isRead = new EventEmitter<boolean>();
+  deleteQuote(read:boolean){
+    this.isRead.emit(read);
+  }
+  upvote(){
+    console.log(this.qLife);
+    
+    this.qLife.likes+=1;
+  }
+  downvote(){
+    this.qLife.dislikes+=1;
+  }
+  
+  // add a quote on submit
+
+  quoteDelete(read: any, index: number){
+    if (read) {
+      let toDelete = confirm(`Are you sure you want to delete this Quote?`)
+      if(toDelete){
+        this.quote.splice(index,1);
+      }
+      
+    }
+  }
+ 
   
   constructor() { }
 

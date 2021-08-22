@@ -4,22 +4,22 @@
             <form class="data" (ngSubmit)='newAddQuote() ;quotesForm.resetForm({})' #quotesForm='ngForm'>
                 <div class="form-group">
                     <label for="Name">Your Name</label>
-                    <input type="text" class="form-control" id="name" [(ngModel)]="newQuote.name" name="name">
+                    <input type="text" required class="form-control" id="name" [(ngModel)]="newQuote.name" name="name">
                      
                   </div>
                   <div class="form-group">
                     <label for="title">Title</label>
-                    <input type="title" class="form-control" id="pwd" [(ngModel)]="newQuote.title">
+                    <input type="title" required class="form-control" id="pwd" [(ngModel)]="newQuote.title" name="title">
                   </div> 
                   <div class="form-group"> 
                       <label for="description">Quote</label>
-                    <textarea class="form-control" id="quote" name="quote" required="" rows="2" spellcheck="false" [(ngModel)]="newQuote.quote"></textarea>
+                    <textarea class="form-control"  required id="quote" name="quote" required="" rows="2" spellcheck="false" [(ngModel)]="newQuote.quote" name="quote"></textarea>
                   </div>
                   <div class="form-group">
                     <label for="author">Author</label>
-                    <input type="author" class="form-control" id="author" ngModel="newQuote.author">
+                    <input type="author" required class="form-control" id="author" [(ngModel)]="newQuote.author" name="author" >
                   </div>
-                  <button type="submit" class="btn btn-success" ngModel="newQuote.name">Add Quote</button>
+                  <button type="submit" class="btn btn-success">Add Quote</button>
             </form>
         </div>
         <div>

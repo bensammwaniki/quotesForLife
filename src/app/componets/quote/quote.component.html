@@ -10,9 +10,9 @@
         </div>
         <br> <br>
         <div class="button">
-          <button class="btn btn-success">{{ quotee.likes }} like</button>
-          <button class="btn btn-danger">{{ quotee.dislikes }} dislike</button>
-          <button class="btn btn-danger">delete</button>
+          <button class="btn btn-success" (click)='upvote()'>{{ quotee.likes }} like</button>
+          <button class="btn btn-danger" (click)='upvote()' >{{ quotee.dislikes }} dislike</button>
+          <button class="btn btn-danger" (click)='deleteQuote(true)'>delete</button>
         </div>
         <br><br>
         <div>
