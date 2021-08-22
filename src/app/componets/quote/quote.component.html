@@ -1,21 +1,21 @@
 <div class="row">
-    <div class="card card-body" style="width: 25rem;" *ngFor="let quotee of quote ">
+    <div class="card card-body" style="width: 25rem;" *ngFor="let quotee of quotesorted ">
         <h3>{{ quotee.title }}</h3>
-        <p>{{ quotee.quoteIt }}</p>
+        <p>{{ quotee.quote }}</p>
         <div class="infor">
-          <h6>{{ quotee.writer }}</h6>
-          <h6>{{ quotee.date | date}}</h6>
+          <h6>{{ quotee.author }}</h6>
+          <h6>{{ quotee.datePosted|date }}</h6>
           <h6>days passed</h6>
         </div>
         <br> <br>
         <div class="button">
-          <button class="btn btn-success">{{ quotee.like }} like</button>
-          <button class="btn btn-danger">{{ quotee.dislike }} dislike</button>
+          <button class="btn btn-success">{{ quotee.likes }} like</button>
+          <button class="btn btn-danger">{{ quotee.dislikes }} dislike</button>
           <button class="btn btn-danger">delete</button>
         </div>
         <br><br>
         <div>
-            {{ quotee.poster }}
+            {{ quotee.name }}
         </div>
         <br><br>
     </div>
