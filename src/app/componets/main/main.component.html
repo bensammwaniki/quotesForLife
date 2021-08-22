@@ -5,23 +5,21 @@
               <!-- ngSubmit)='addQuote() ;quotesForm.resetForm({})' -->
                 <div class="form-group">
                     <label for="Name">Your Name</label>
-                    <input type="text" class="form-control" id="name">
-                    <!-- [(ngModel)]="quoter.name"  -->
+                    <input type="text" class="form-control" id="name"[(ngModel)]="quoter.name">
+                    [(ngModel)]="quoter.name" 
                   </div>
                   <div class="form-group">
                     <label for="title">Title</label>
-                    <input type="title" class="form-control" id="pwd">
-                    <!-- [(ngModel)]="quoter.title" -->
+                    <input type="title" class="form-control" id="pwd" [(ngModel)]="quoter.title">
+                    
                   </div> 
                   <div class="form-group">
                       <label for="description">Quote</label>
-                    <textarea class="form-control" id="quote" name="quote" required="" rows="2" spellcheck="false"></textarea>
-                    <!-- [(ngModel)]="quoter.itself"  -->
+                    <textarea class="form-control" id="quote" name="quote" required="" rows="2" spellcheck="false"[(ngModel)]="quoter.itself" ></textarea>
                   </div>
                   <div class="form-group">
                     <label for="author">Author</label>
-                    <input type="author" class="form-control" id="author">
-                    <!-- [(ngModel)]="quoter.author"  -->
+                    <input type="author" class="form-control" id="author"[(ngModel)]="quoter.author" >
                   </div>
                   <button type="submit" class="btn btn-success">Add Quote</button>
             </form>
