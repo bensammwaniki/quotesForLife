@@ -1,7 +1,7 @@
 <body>
     <div class="container form">
         <div>
-            <form class="data" (ngSubmit)='newAdQuote() ;quotesForm.resetForm({})' #quotesForm='ngForm'>
+            <form class="data" #quotesForm='ngForm' (ngSubmit)='newAddQuote()' >
                 <div class="form-group">
                     <label for="Name">Your Name</label>
                     <input type="text" required class="form-control" id="name" [(ngModel)]="newQuote.name" name="name">
@@ -19,7 +19,7 @@
                     <label for="author">Author</label>
                     <input type="author" required class="form-control" id="author" [(ngModel)]="newQuote.author" name="author">
                   </div>
-                  <button type="submit" class="btn btn-success">Add Quote</button>
+                  <button class="btn btn-success">Add Quote</button>
             </form>
         </div>
         <div>

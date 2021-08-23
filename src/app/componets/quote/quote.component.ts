@@ -1,7 +1,7 @@
 
 import { Input } from '@angular/core';
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
-import { Quote } from 'src/app/quote';
+import { Quote } from '../../quote';
 
 @Component({
   selector: 'app-quote',
@@ -31,23 +31,13 @@ export class QuoteComponent implements OnInit {
     console.log(Quote);
   }
 // likes and dislikes 
-  @Input()
-  qLife: Quote;
+  @Input() qLife: Quote;
   @Output() isRead = new EventEmitter<boolean>();
+
   deleteQuote(read:boolean){
     this.isRead.emit(read);
   }
-  upvote(){
-    console.log(this.qLife);
-    this.qLife.likes+=1;
-  }
-  downvote(){
-    this.qLife.dislikes+=1;
-  }
-  
-  // add a quote on submit
-
-  quoteDelete(read: any, index: number){
+  quoteDelete(read,index){
     if (read) {
       let toDelete = confirm(`Are you sure you want to delete this Quote?`)
       if(toDelete){
@@ -56,7 +46,19 @@ export class QuoteComponent implements OnInit {
       
     }
   }
- 
+
+  likes:number=0;
+  dislikes:number=0;
+  // likes  function
+  upvote(){
+    this.likes++;
+
+  }
+  downvote(){
+    this.dislikes+=1;
+  }
+  
+  // add a quote on submit
   
   constructor() { }
 

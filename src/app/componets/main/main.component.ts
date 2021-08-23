@@ -1,5 +1,5 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
-import { Quote } from 'src/app/quote'; 
+import { Quote } from '../../quote'; 
 
 @Component({
   selector: 'app-main',
@@ -10,12 +10,9 @@ export class MainComponent implements OnInit {
 newQuote = new Quote(0,"","","","",new Date(),0,0);
    @Output() add = new EventEmitter<Quote>();
    
-newAdQuote(){
+newAddQuote(){
 this.add.emit(this.newQuote);
-this.newQuote = new Quote(0,"","","","",new Date(),0,0);
-
   }
-  
  constructor() { }
   ngOnInit() {
   }
