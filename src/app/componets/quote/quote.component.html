@@ -6,7 +6,7 @@
         <div class="infor">
           <h6>{{ quotee.author }}</h6>
           <h6>{{ quotee.datePosted|date }}</h6>
-          <h6>days passed</h6>
+          <h6>{{ quotee.datePosted|datepipe }}</h6>
         </div>
         <br> <br>
         <div class="button">
