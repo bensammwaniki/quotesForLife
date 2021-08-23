@@ -16,7 +16,7 @@ export class QuoteComponent implements OnInit {
     new Quote (3,'Njoroge','The great myth',"Your time is limited, so don't waste it living someone else's life. Don't be trapped by dogma – which is living with the results of other people's thinking",'steve jobs',new Date(2009,8,3),0,0),
     new Quote (4,'Joseph','Communication','If life were predictable it would cease to be life, and be without flavor.','Elenor Roosevelt',new Date(2020,12,3),0,0),
     new Quote (5,'Bensam','Human spirit','The greatest glory in living lies not in never falling, but in rising every time we fall.','Nelson Mandela', new Date(2021,9,12),0,0),
-
+    new Quote (6,'Alfred','life','For a list of all the ways technology has failed to improve the quality of life, please press three.','Alice Kahn',new Date(2019,7,15),0,0)
   ];
     get quotesorted() {
     return this.quote.sort((a, b) => {
@@ -30,16 +30,15 @@ export class QuoteComponent implements OnInit {
     this.quote.push(quoteAdd)
     console.log(Quote);
   }
-
+// likes and dislikes 
   @Input()
-  qLife!: Quote;
+  qLife: Quote;
   @Output() isRead = new EventEmitter<boolean>();
   deleteQuote(read:boolean){
     this.isRead.emit(read);
   }
   upvote(){
     console.log(this.qLife);
-    
     this.qLife.likes+=1;
   }
   downvote(){
